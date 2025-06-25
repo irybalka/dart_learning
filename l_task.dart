@@ -14,6 +14,17 @@ void main() {
   double number = 771.0;
   print(Comparison(number));
 
+  //logical operations
+  bool hasMoney     = false;
+  bool isStoreOpen  = false;
+ print(ShoppingCheck(hasMoney, isStoreOpen));
+ 
+ 
+ 
+
+
+
+
 }
 
 String Comparison(var number) {
@@ -25,6 +36,15 @@ String Comparison(var number) {
   String comparison100 = number < 100 ? "Less than 100" : "Not less than 100";
   String devision5     = number % 5  == 0 ? "Divisible by 5" : "Not divisible by 5";
   return "$comparison50," + " $comparison100," + " $devision5";
-
-
 }
+
+String ShoppingCheck(bool hasMoney, bool isStoreOpen) {
+  if ((hasMoney == !isStoreOpen) || (hasMoney==false && isStoreOpen == false)){
+    return "No shoping! You should wait!!";
+  } else{
+    return "Shop now!!!!";
+  } 
+  
+
+  }
+
