@@ -21,6 +21,14 @@ void main() {
   //ternary operations
   double temperature = 40;
   print(TernaryFunction(temperature));
+
+  //assignment operations
+  double score = 0;
+  int correctAnswers = 17;
+  int mistakes = 3;
+  int totalQuestions = 20;
+  score = AssignmentFunction(correctAnswers, mistakes, totalQuestions);
+  print(score);
 }
 
 String Comparison(var number) {
@@ -49,4 +57,14 @@ String TernaryFunction(double temperature) {
       : temperature < 10
           ? "Дуже холодно"
           : "Прохолодно";
+}
+
+double AssignmentFunction(
+    int correctAnswers, int mistakes, int totalQuestions) {
+  double score = 0;
+  score += correctAnswers * 10;
+  score -= mistakes * 5;
+  score *= 2;
+  score /= totalQuestions;
+  return score;
 }
