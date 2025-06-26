@@ -29,6 +29,10 @@ void main() {
   int totalQuestions = 20;
   score = AssignmentFunction(correctAnswers, mistakes, totalQuestions);
   print(score);
+
+  //conditional operations
+  int examScore = 91;
+  print(ConditionalFunction(examScore));
 }
 
 String Comparison(var number) {
@@ -67,4 +71,22 @@ double AssignmentFunction(
   score *= 2;
   score /= totalQuestions;
   return score;
+}
+
+String ConditionalFunction(int examScore) {
+  String result1, result2 = "";
+  if (examScore > 90) {
+    result1 = "Відмінно.";
+  } else if ((examScore <= 90) && (examScore >= 75)) {
+    result1 = "Добре.";
+  } else if ((examScore <= 74) && (examScore >= 60)) {
+    result1 = "Задовільно.";
+  } else {
+    result1 = "Не здано";
+  }
+  if (examScore < 20) {
+    result2 = "Повторити курс";
+  }
+
+  return result1 + " " + result2;
 }
