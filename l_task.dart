@@ -42,6 +42,9 @@ void main() {
   // "all" to print all numbers. "even" - to print only even numbers
   String loopTask = 'even';
   GetLoopNumbers(loopTask);
+
+//while loop
+  GetWhileNumbers();
 }
 
 String Comparison(var number) {
@@ -133,4 +136,14 @@ void GetLoopNumbers(String loopTask) {
     }
   }
   print("total sum is $total");
+}
+
+void GetWhileNumbers() {
+  var initialValue = 10;
+  while (initialValue >= 0) {
+    print(initialValue.toString() +
+        " " +
+        ((initialValue % 2 == 0) ? "Парне число" : "Непарно число"));
+    initialValue--;
+  }
 }
