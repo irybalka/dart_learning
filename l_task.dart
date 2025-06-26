@@ -37,6 +37,11 @@ void main() {
   //switch operation
   int dayNumber = 7;
   print(WeekDefinder(dayNumber));
+
+  //for loop
+  // "all" to print all numbers. "even" - to print only even numbers
+  String loopTask = 'even';
+  GetLoopNumbers(loopTask);
 }
 
 String Comparison(var number) {
@@ -115,4 +120,17 @@ String WeekDefinder(int dayNumber) {
     default:
       return "Невірний номер дня";
   }
+}
+
+void GetLoopNumbers(String loopTask) {
+  int total = 0;
+  for (int i = 1; i < 11; i++) {
+    total += i;
+    if (loopTask == 'all') {
+      print(i);
+    } else if ((loopTask == 'even') && (i % 2 == 0)) {
+      print(i);
+    }
+  }
+  print("total sum is $total");
 }
