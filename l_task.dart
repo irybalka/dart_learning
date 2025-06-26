@@ -74,7 +74,8 @@ double AssignmentFunction(
 }
 
 String ConditionalFunction(int examScore) {
-  String result1, result2 = "";
+  String result1 = "";
+  String result2 = "";
   if (examScore > 90) {
     result1 = "Відмінно.";
   } else if ((examScore <= 90) && (examScore >= 75)) {
