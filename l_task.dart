@@ -33,6 +33,10 @@ void main() {
   //conditional operations
   int examScore = 91;
   print(ConditionalFunction(examScore));
+
+  //switch operation
+  int dayNumber = 7;
+  print(WeekDefinder(dayNumber));
 }
 
 String Comparison(var number) {
@@ -90,4 +94,25 @@ String ConditionalFunction(int examScore) {
   }
 
   return result1 + " " + result2;
+}
+
+String WeekDefinder(int dayNumber) {
+  switch (dayNumber) {
+    case 1:
+      return "Понеділок";
+    case 2:
+      return "Вівторок";
+    case 3:
+      return "Середа";
+    case 4:
+      return "Четвер";
+    case 5:
+      return "П'ятниця";
+    case 6:
+      return "Субота. Вихідний";
+    case 7:
+      return "Неділя. Вихідний";
+    default:
+      return "Невірний номер дня";
+  }
 }
