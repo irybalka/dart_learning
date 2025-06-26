@@ -45,6 +45,9 @@ void main() {
 
 //while loop
   GetWhileNumbers();
+
+// break and continue
+  BreakContinueProcedure();
 }
 
 String Comparison(var number) {
@@ -145,5 +148,15 @@ void GetWhileNumbers() {
         " " +
         ((initialValue % 2 == 0) ? "Парне число" : "Непарно число"));
     initialValue--;
+  }
+}
+
+void BreakContinueProcedure() {
+  for (int i = 1; i < 21; i++) {
+    if (i % 3 == 0) {
+      continue;
+    }
+    if (i > 15) break;
+    print(i);
   }
 }
